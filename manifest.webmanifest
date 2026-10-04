@@ -1,0 +1,9 @@
+{
+  "name": "Product → Flow Maker",
+  "short_name": "Flow Maker",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f6fa",
+  "theme_color": "#ffffff",
+  "description": "Shopee/TikTok product storyboard and Flow prompt maker."
+}

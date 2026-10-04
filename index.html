@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Flow Maker">
+<meta name="theme-color" content="#ffffff">
+<title>Shopee / TikTok → Flow Maker</title>
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#111827;background:#f5f6fa}
+*{box-sizing:border-box}body{margin:0}.wrap{max-width:720px;margin:auto;padding:calc(18px + env(safe-area-inset-top)) 16px calc(30px + env(safe-area-inset-bottom))}
+.hero{background:#111827;color:white;border-radius:22px;padding:20px;margin-bottom:14px}
+.hero h1{font-size:24px;margin:0 0 7px}.hero p{font-size:13px;line-height:1.5;margin:0;color:#d1d5db}
+.card{background:white;border:1px solid #e5e7eb;border-radius:20px;padding:16px;margin:12px 0;box-shadow:0 4px 18px rgba(0,0,0,.035)}
+label{display:block;font-size:13px;font-weight:750;margin-bottom:7px}
+input,textarea,select{width:100%;font:inherit;border:1px solid #d1d5db;border-radius:14px;padding:13px;background:#fff}
+textarea{min-height:260px;resize:vertical;font-size:13px;line-height:1.45}
+button,a.btn{appearance:none;border:0;border-radius:14px;padding:14px 12px;font-size:15px;font-weight:750;text-decoration:none;text-align:center;display:block;cursor:pointer}
+.primary{background:#111827;color:white}.soft{background:#eef2f7;color:#111827}.flow{background:#2563eb;color:white}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.mt{margin-top:10px}
+.note{font-size:12px;color:#64748b;line-height:1.5;margin-top:8px}.ok{font-size:12px;color:#166534;margin-top:9px}
+ol{padding-left:22px;margin:10px 0 0;line-height:1.65;font-size:13px}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.badge{font-size:11px;background:#1f2937;border:1px solid #374151;padding:5px 8px;border-radius:99px}
+h2{font-size:16px;margin:0 0 12px}.hidden{display:none}
+</style>
+</head>
+<body><div class="wrap">
+<section class="hero">
+<h1>Product → Flow Maker</h1>
+<p>สำหรับ iPad / iPhone • Shopee & TikTok • Product-only video</p>
+<div class="badges"><span class="badge">9:16</span><span class="badge">10s</span><span class="badge">No Model</span><span class="badge">No Text</span><span class="badge">No Voice</span></div>
+</section>
+
+<section class="card">
+<label>1. วางลิงก์สินค้า Shopee หรือ TikTok</label>
+<input id="url" type="url" inputmode="url" placeholder="วางลิงก์ที่คัดลอกมาที่นี่">
+<div class="grid mt">
+<button class="soft" id="paste">วางจาก Clipboard</button>
+<button class="primary" id="make">สร้าง Storyboard</button>
+</div>
+<div class="note">V5 ไม่ส่งลิงก์ไปยัง AI/API ภายนอก การสร้าง Storyboard ใช้กฎที่อยู่ในแอป</div>
+</section>
+
+<section class="card">
+<h2>2. Storyboard อัตโนมัติ</h2>
+<ol id="story">
+<li>0–2 วิ — Product Hero เห็นสินค้าทั้งชิ้น</li>
+<li>2–4 วิ — Close-up รายละเอียดสินค้า</li>
+<li>4–6 วิ — เปลี่ยนมุมสินค้าอย่างเป็นธรรมชาติ</li>
+<li>6–8 วิ — Macro จุดเด่น วัสดุ หรือพื้นผิว</li>
+<li>8–10 วิ — Final Hero สินค้าเด่นกลางภาพ</li>
+</ol>
+</section>
+
+<section class="card">
+<h2>3. Prompt สำหรับ Flow</h2>
+<textarea id="prompt"></textarea>
+<div class="grid mt">
+<button class="soft" id="copy">คัดลอก Prompt</button>
+<a class="btn flow" id="openFlow" href="https://labs.google/fx/tools/flow" target="_blank" rel="noopener">เปิด Google Flow</a>
+</div>
+<div id="status" class="ok">พร้อมใช้งาน</div>
+</section>
+
+<section class="card">
+<h2>วิธีใช้บน iPad / iPhone</h2>
+<ol>
+<li>ใน Shopee หรือ TikTok กด Share แล้วเลือก Copy Link</li>
+<li>กลับมาที่ Flow Maker แล้วกด “วางจาก Clipboard”</li>
+<li>กด “สร้าง Storyboard”</li>
+<li>กด “คัดลอก Prompt” แล้ว “เปิด Google Flow”</li>
+<li>ใส่ภาพสินค้าจริงเป็น reference ใน Flow แล้ววาง Prompt</li>
+<li>ตรวจสินค้าให้ถูกต้องก่อนกด Generate</li>
+</ol>
+<div class="note">เพิ่มเป็นแอปบน iPad/iPhone: เปิดหน้านี้ใน Safari → Share → Add to Home Screen</div>
+</section>
+</div>
+<script>
+const $=x=>document.getElementById(x);
+function sourceLabel(u){
+ try{let h=new URL(u).hostname.toLowerCase();if(h.includes("shopee"))return "Shopee";if(h.includes("tiktok"))return "TikTok";return "product page"}catch{return "product page"}
+}
+function makePrompt(){
+ const src=sourceLabel($("url").value.trim());
+ return `Create a photorealistic product-only video from the uploaded product reference.
+
+SOURCE CONTEXT:
+Product reference copied from ${src}. Use the uploaded real product images as the visual truth.
+
+FORMAT:
+9:16 vertical, exactly 10 seconds.
+
+VISUAL SEQUENCE:
+0–2s: Clean product hero shot. Show the entire real product clearly.
+2–4s: Slow close-up revealing authentic material, texture, construction and visible details.
+4–6s: Show the same product from a different natural angle with gentle camera movement.
+6–8s: Macro/detail shot highlighting the most useful visible product feature without any human interaction.
+8–10s: Premium final hero shot, same product centered and fully visible.
+
+PRODUCT LOCK:
+Preserve the exact product from the uploaded reference: same shape, proportions, colors, material, logo, graphics, pattern, packaging and visible construction. Never redesign, recolor, replace or invent details.
+
+STRICT RULES:
+PRODUCT ONLY.
+NO model, NO person, NO human body, NO hands.
+NO on-screen text, captions, subtitles, stickers, price tags or added letters.
+NO voice-over, dialogue, music or sound effects.
+NO extra product and NO duplicate product.
+No invented usage that requires a person or hand.
+Minimal clean realistic commercial environment.
+Natural lighting and smooth premium camera movement.`;
+}
+$("prompt").value=makePrompt();
+$("make").onclick=()=>{$("prompt").value=makePrompt();localStorage.setItem("lastURL",$("url").value);localStorage.setItem("lastPrompt",$("prompt").value);$("status").textContent="สร้าง Storyboard + Prompt แล้ว โดยไม่ใช้เครดิต AI";};
+$("paste").onclick=async()=>{try{$("url").value=await navigator.clipboard.readText();$("status").textContent="วางลิงก์แล้ว";}catch{$("status").textContent="Safari ไม่อนุญาตให้อ่าน Clipboard — แตะช่องแล้วเลือก Paste ได้เลย";}};
+$("copy").onclick=async()=>{try{await navigator.clipboard.writeText($("prompt").value);$("status").textContent="คัดลอก Prompt แล้ว — เปิด Flow ได้เลย";}catch{$("prompt").select();document.execCommand("copy");$("status").textContent="คัดลอก Prompt แล้ว";}};
+const u=localStorage.getItem("lastURL"),p=localStorage.getItem("lastPrompt");if(u)$("url").value=u;if(p)$("prompt").value=p;
+if("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js").catch(()=>{});
+</script>
+</body></html>
