@@ -1,21 +1,14 @@
-PRODUCT → FLOW MAKER V5 — iPad/iPhone Web App
+FLOW MAKER V6
+อัปเดตจาก V5:
+- เพิ่มเลือกรูปสินค้าหลายรูปจาก iPhone/iPad
+- Preview รูปในเครื่อง
+- เลือกประเภทสินค้า
+- Storyboard เปลี่ยนตามประเภทสินค้า
+- Multi-reference Product Lock prompt
+- ไม่มี AI/API ภายนอกในขั้น Storyboard/Prompt
 
-ไฟล์นี้เป็น Web App (PWA) ไม่ใช่ Chrome Extension
-
-การใช้งาน:
-1) นำโฟลเดอร์นี้ขึ้น Web Hosting แบบ HTTPS
-2) เปิด URL ด้วย Safari บน iPad/iPhone
-3) Safari > Share > Add to Home Screen
-4) จาก Shopee/TikTok: Share > Copy Link
-5) เปิด Flow Maker > วางลิงก์ > สร้าง Storyboard
-6) Copy Prompt > เปิด Google Flow
-7) อัปโหลดรูปสินค้าจริงเป็น reference > วาง Prompt > ตรวจ > Generate
-
-ไม่มี AI/API ภายนอกในขั้น Storyboard/Prompt
-ดังนั้นไม่มีเครดิต AI เพิ่มจากขั้นนี้
-เครดิตเกิดจากบริการสร้างวิดีโอที่ผู้ใช้เลือกใช้ใน Google Flow ตามเงื่อนไขบัญชี
-
-หมายเหตุ:
-เว็บบน iOS ไม่สามารถดึงรูป/รายละเอียดจากหน้า Shopee หรือ TikTok ข้ามโดเมนได้อย่างน่าเชื่อถือโดยตรง
-เนื่องจากข้อจำกัด browser/CORS และการป้องกันของแพลตฟอร์ม
-V5 จึงรับลิงก์และสร้าง storyboard/prompt แบบ local-first โดยไม่ใช้ API เสียเงิน
+อัปเดต GitHub:
+ให้อัปโหลด index.html, manifest.webmanifest และ sw.js ชุด V6 ทับไฟล์เดิมใน repository flow-maker
+README.txt จะอัปโหลดทับด้วยก็ได้
+หลัง Commit รอ GitHub Pages deploy แล้วปิด/เปิด Flow Maker ใหม่
+หากยังเห็น V5 ให้ Refresh หน้าเว็บ หรือเอาไอคอนออกแล้ว Add to Home Screen ใหม่

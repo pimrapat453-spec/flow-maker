@@ -6,118 +6,141 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Flow Maker">
-<meta name="theme-color" content="#ffffff">
-<title>Shopee / TikTok → Flow Maker</title>
+<meta name="theme-color" content="#111827">
+<title>Flow Maker V6</title>
 <link rel="manifest" href="manifest.webmanifest">
 <style>
-:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#111827;background:#f5f6fa}
-*{box-sizing:border-box}body{margin:0}.wrap{max-width:720px;margin:auto;padding:calc(18px + env(safe-area-inset-top)) 16px calc(30px + env(safe-area-inset-bottom))}
-.hero{background:#111827;color:white;border-radius:22px;padding:20px;margin-bottom:14px}
-.hero h1{font-size:24px;margin:0 0 7px}.hero p{font-size:13px;line-height:1.5;margin:0;color:#d1d5db}
-.card{background:white;border:1px solid #e5e7eb;border-radius:20px;padding:16px;margin:12px 0;box-shadow:0 4px 18px rgba(0,0,0,.035)}
-label{display:block;font-size:13px;font-weight:750;margin-bottom:7px}
-input,textarea,select{width:100%;font:inherit;border:1px solid #d1d5db;border-radius:14px;padding:13px;background:#fff}
-textarea{min-height:260px;resize:vertical;font-size:13px;line-height:1.45}
-button,a.btn{appearance:none;border:0;border-radius:14px;padding:14px 12px;font-size:15px;font-weight:750;text-decoration:none;text-align:center;display:block;cursor:pointer}
-.primary{background:#111827;color:white}.soft{background:#eef2f7;color:#111827}.flow{background:#2563eb;color:white}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.mt{margin-top:10px}
-.note{font-size:12px;color:#64748b;line-height:1.5;margin-top:8px}.ok{font-size:12px;color:#166534;margin-top:9px}
-ol{padding-left:22px;margin:10px 0 0;line-height:1.65;font-size:13px}
-.badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.badge{font-size:11px;background:#1f2937;border:1px solid #374151;padding:5px 8px;border-radius:99px}
-h2{font-size:16px;margin:0 0 12px}.hidden{display:none}
+:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#111827;background:#f4f6fa}
+*{box-sizing:border-box}body{margin:0}.wrap{max-width:760px;margin:auto;padding:calc(18px + env(safe-area-inset-top)) 16px calc(35px + env(safe-area-inset-bottom))}
+.hero{background:#111827;color:#fff;border-radius:24px;padding:21px;margin-bottom:14px}
+.hero h1{margin:0 0 7px;font-size:25px}.hero p{margin:0;color:#d1d5db;line-height:1.45;font-size:13px}
+.badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:13px}.badge{border:1px solid #4b5563;border-radius:99px;padding:5px 9px;font-size:11px}
+.card{background:#fff;border:1px solid #e3e6eb;border-radius:21px;padding:16px;margin:12px 0;box-shadow:0 4px 18px rgba(0,0,0,.035)}
+h2{font-size:17px;margin:0 0 12px}label{display:block;font-size:13px;font-weight:750;margin:11px 0 6px}
+input,select,textarea{width:100%;border:1px solid #d2d6de;border-radius:14px;padding:13px;background:#fff;font:inherit}
+textarea{min-height:300px;font-size:12px;line-height:1.5;resize:vertical}
+button,a.btn{display:block;width:100%;border:0;border-radius:14px;padding:14px 12px;font:inherit;font-weight:750;text-align:center;text-decoration:none;cursor:pointer}
+.primary{background:#111827;color:#fff}.soft{background:#eef1f5;color:#111827}.flow{background:#2563eb;color:#fff}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.mt{margin-top:10px}.note{font-size:12px;color:#64748b;line-height:1.45;margin-top:8px}
+.status{font-size:12px;color:#166534;margin-top:9px}.upload{border:1.5px dashed #aeb5c1;border-radius:16px;padding:15px;text-align:center;background:#fafbfc}
+.upload input{border:0;padding:6px}.previews{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.thumb{aspect-ratio:1/1;border-radius:12px;overflow:hidden;background:#eef1f5;position:relative}.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb span{position:absolute;left:5px;bottom:5px;background:rgba(0,0,0,.7);color:white;font-size:9px;padding:3px 5px;border-radius:6px}
+ol{padding-left:22px;margin:8px 0 0;font-size:13px;line-height:1.65}.count{font-size:12px;color:#475569;margin-top:8px}
 </style>
-</head>
-<body><div class="wrap">
-<section class="hero">
-<h1>Product → Flow Maker</h1>
-<p>สำหรับ iPad / iPhone • Shopee & TikTok • Product-only video</p>
-<div class="badges"><span class="badge">9:16</span><span class="badge">10s</span><span class="badge">No Model</span><span class="badge">No Text</span><span class="badge">No Voice</span></div>
+</head><body><div class="wrap">
+<section class="hero"><h1>Product → Flow Maker V6</h1>
+<p>iPhone / iPad • Shopee & TikTok • เพิ่มรูปสินค้าจริงเพื่อให้ Flow รักษารายละเอียดได้แม่นขึ้น</p>
+<div class="badges"><span class="badge">9:16</span><span class="badge">10s</span><span class="badge">Product Only</span><span class="badge">No Model</span><span class="badge">No Text</span><span class="badge">No Voice</span></div></section>
+
+<section class="card">
+<h2>1. สินค้า</h2>
+<label>ลิงก์ Shopee / TikTok</label>
+<input id="url" type="url" inputmode="url" placeholder="วางลิงก์สินค้า">
+<div class="grid mt"><button class="soft" id="paste">วาง Clipboard</button><button class="soft" id="clear">ล้างข้อมูล</button></div>
+<label>ประเภทสินค้า</label>
+<select id="type">
+<option value="auto">ทั่วไป / ให้ระบบเลือก Storyboard มาตรฐาน</option>
+<option value="fashion">เสื้อผ้า / แฟชั่น</option>
+<option value="shoes">รองเท้า</option>
+<option value="bag">กระเป๋า</option>
+<option value="beauty">เครื่องสำอาง / สกินแคร์</option>
+<option value="bottle">แก้ว / ขวด / กระบอกน้ำ</option>
+<option value="home">ของใช้ในบ้าน</option>
+<option value="electronics">อุปกรณ์ / อิเล็กทรอนิกส์</option>
+</select>
 </section>
 
 <section class="card">
-<label>1. วางลิงก์สินค้า Shopee หรือ TikTok</label>
-<input id="url" type="url" inputmode="url" placeholder="วางลิงก์ที่คัดลอกมาที่นี่">
-<div class="grid mt">
-<button class="soft" id="paste">วางจาก Clipboard</button>
-<button class="primary" id="make">สร้าง Storyboard</button>
+<h2>2. เพิ่มรูปสินค้าจริง</h2>
+<div class="upload">
+<label style="margin-top:0">เลือกได้หลายรูป เช่น หน้า / หลัง / ด้านข้าง / รายละเอียด</label>
+<input id="images" type="file" accept="image/*" multiple>
 </div>
-<div class="note">V5 ไม่ส่งลิงก์ไปยัง AI/API ภายนอก การสร้าง Storyboard ใช้กฎที่อยู่ในแอป</div>
+<div id="previews" class="previews"></div>
+<div id="imgCount" class="count">ยังไม่ได้เลือกรูป</div>
+<div class="note">รูปจะถูก Preview ในอุปกรณ์นี้เท่านั้น V6 ไม่อัปโหลดรูปไปยังเซิร์ฟเวอร์หรือ AI ภายนอก จากนั้นใช้รูปต้นฉบับชุดเดียวกันอัปโหลดเป็น reference ใน Flow</div>
 </section>
 
 <section class="card">
-<h2>2. Storyboard อัตโนมัติ</h2>
-<ol id="story">
-<li>0–2 วิ — Product Hero เห็นสินค้าทั้งชิ้น</li>
-<li>2–4 วิ — Close-up รายละเอียดสินค้า</li>
-<li>4–6 วิ — เปลี่ยนมุมสินค้าอย่างเป็นธรรมชาติ</li>
-<li>6–8 วิ — Macro จุดเด่น วัสดุ หรือพื้นผิว</li>
-<li>8–10 วิ — Final Hero สินค้าเด่นกลางภาพ</li>
-</ol>
+<h2>3. สร้าง Storyboard</h2>
+<button id="make" class="primary">สร้าง Storyboard + Prompt</button>
+<ol id="story"></ol>
 </section>
 
 <section class="card">
-<h2>3. Prompt สำหรับ Flow</h2>
+<h2>4. Prompt สำหรับ Google Flow</h2>
 <textarea id="prompt"></textarea>
-<div class="grid mt">
-<button class="soft" id="copy">คัดลอก Prompt</button>
-<a class="btn flow" id="openFlow" href="https://labs.google/fx/tools/flow" target="_blank" rel="noopener">เปิด Google Flow</a>
-</div>
-<div id="status" class="ok">พร้อมใช้งาน</div>
+<div class="grid mt"><button id="copy" class="soft">คัดลอก Prompt</button><a class="btn flow" href="https://labs.google/fx/tools/flow" target="_blank" rel="noopener">เปิด Google Flow</a></div>
+<div id="status" class="status">พร้อมใช้งาน — ขั้น Storyboard/Prompt ไม่ใช้ AI API</div>
 </section>
 
 <section class="card">
-<h2>วิธีใช้บน iPad / iPhone</h2>
+<h2>ใช้ใน Flow</h2>
 <ol>
-<li>ใน Shopee หรือ TikTok กด Share แล้วเลือก Copy Link</li>
-<li>กลับมาที่ Flow Maker แล้วกด “วางจาก Clipboard”</li>
-<li>กด “สร้าง Storyboard”</li>
-<li>กด “คัดลอก Prompt” แล้ว “เปิด Google Flow”</li>
-<li>ใส่ภาพสินค้าจริงเป็น reference ใน Flow แล้ววาง Prompt</li>
-<li>ตรวจสินค้าให้ถูกต้องก่อนกด Generate</li>
+<li>อัปโหลดรูปสินค้าต้นฉบับที่เลือกไว้เป็น reference/ingredient ใน Flow</li>
+<li>วาง Prompt ที่ V6 สร้างให้</li>
+<li>ตรวจว่ารูป สี โลโก้ และรายละเอียดสินค้าถูกต้อง</li>
+<li>กด Generate เมื่อพร้อมเท่านั้น</li>
 </ol>
-<div class="note">เพิ่มเป็นแอปบน iPad/iPhone: เปิดหน้านี้ใน Safari → Share → Add to Home Screen</div>
 </section>
 </div>
 <script>
-const $=x=>document.getElementById(x);
-function sourceLabel(u){
- try{let h=new URL(u).hostname.toLowerCase();if(h.includes("shopee"))return "Shopee";if(h.includes("tiktok"))return "TikTok";return "product page"}catch{return "product page"}
-}
-function makePrompt(){
- const src=sourceLabel($("url").value.trim());
- return `Create a photorealistic product-only video from the uploaded product reference.
-
-SOURCE CONTEXT:
-Product reference copied from ${src}. Use the uploaded real product images as the visual truth.
+const $=id=>document.getElementById(id);
+const boards={
+auto:["0–2 วิ — Product Hero เห็นสินค้าทั้งชิ้น","2–4 วิ — Close-up รายละเอียดสำคัญ","4–6 วิ — เปลี่ยนมุมสินค้าอย่างเป็นธรรมชาติ","6–8 วิ — Macro วัสดุ/พื้นผิว/จุดเด่น","8–10 วิ — Final Hero สินค้าเด่นกลางภาพ"],
+fashion:["0–2 วิ — เสื้อ/สินค้าแฟชั่นเต็มชิ้นแบบ flat/product display","2–4 วิ — Close-up เนื้อผ้า ตะเข็บ คอเสื้อ หรือลายจริง","4–6 วิ — มุมด้านข้าง/มิติของสินค้าโดยไม่มีคน","6–8 วิ — Macro โลโก้ ลายปัก ลายพิมพ์ หรือ texture","8–10 วิ — Final product hero แบบสะอาด"],
+shoes:["0–2 วิ — Hero เห็นรองเท้าทรงจริงชัดเจน","2–4 วิ — Close-up upper / stitching / logo","4–6 วิ — มุมด้านข้างและส้นรองเท้า","6–8 วิ — Macro พื้นรองเท้า/วัสดุ/รายละเอียด","8–10 วิ — Final hero angle"],
+bag:["0–2 วิ — Hero เห็นกระเป๋าทั้งใบ","2–4 วิ — Close-up วัสดุ ซิป หูจับ โลโก้","4–6 วิ — มุมด้านข้างแสดงทรงจริง","6–8 วิ — Macro งานเย็บ/พื้นผิว/ช่องที่มองเห็นได้","8–10 วิ — Final hero"],
+beauty:["0–2 วิ — Hero บรรจุภัณฑ์จริงเต็มชิ้น","2–4 วิ — Close-up ฝา ฉลาก รูปทรงแพ็กเกจ","4–6 วิ — หมุนมุมสินค้าอย่างช้า ๆ โดยไม่มีมือ","6–8 วิ — Macro texture ของบรรจุภัณฑ์/รายละเอียดที่มองเห็นได้","8–10 วิ — Premium final packshot"],
+bottle:["0–2 วิ — Hero เห็นขวด/แก้วเต็มใบ","2–4 วิ — Close-up ฝา ปากขวด ลาย และวัสดุ","4–6 วิ — มุมด้านข้างแสดงรูปทรงจริง","6–8 วิ — Macro ฝา/ผิววัสดุ/รายละเอียด","8–10 วิ — Final hero"],
+home:["0–2 วิ — Hero สินค้าบนฉากใช้งานที่สะอาด ไม่มีคน","2–4 วิ — Close-up วัสดุและโครงสร้าง","4–6 วิ — เปลี่ยนมุมให้เห็นรูปทรง/ส่วนประกอบ","6–8 วิ — Macro จุดเด่นที่มองเห็นได้โดยไม่ใช้มือ","8–10 วิ — Final hero"],
+electronics:["0–2 วิ — Clean tech hero shot","2–4 วิ — Close-up พอร์ต ปุ่ม วัสดุ และรายละเอียดจริง","4–6 วิ — Alternate technical angle","6–8 วิ — Macro construction/detail","8–10 วิ — Premium final hero"]
+};
+const typeNames={auto:"general product",fashion:"fashion/apparel product",shoes:"footwear",bag:"bag",beauty:"beauty/cosmetic product",bottle:"bottle/tumbler",home:"home-use product",electronics:"electronic/accessory product"};
+function render(){
+ const t=$("type").value, b=boards[t]||boards.auto;
+ $("story").innerHTML=b.map(x=>`<li>${x}</li>`).join("");
+ const src=(()=>{try{let h=new URL($("url").value).hostname;if(h.includes("shopee"))return "Shopee";if(h.includes("tiktok"))return "TikTok"}catch{}return "product source"})();
+ $("prompt").value=`Create a photorealistic product-only video using the uploaded real product reference images as the absolute visual truth.
 
 FORMAT:
 9:16 vertical, exactly 10 seconds.
 
+PRODUCT CATEGORY:
+${typeNames[t]} from ${src}.
+
 VISUAL SEQUENCE:
-0–2s: Clean product hero shot. Show the entire real product clearly.
-2–4s: Slow close-up revealing authentic material, texture, construction and visible details.
-4–6s: Show the same product from a different natural angle with gentle camera movement.
-6–8s: Macro/detail shot highlighting the most useful visible product feature without any human interaction.
-8–10s: Premium final hero shot, same product centered and fully visible.
+${b.map((x,i)=>`${i+1}. ${x.replace(/^\d+–\d+ วิ — /,"")}`).join("\n")}
 
-PRODUCT LOCK:
-Preserve the exact product from the uploaded reference: same shape, proportions, colors, material, logo, graphics, pattern, packaging and visible construction. Never redesign, recolor, replace or invent details.
+MULTI-REFERENCE PRODUCT LOCK:
+Study all uploaded reference images together. They show the SAME real product from different angles/details.
+Preserve the exact real product 100%: shape, proportions, dimensions, colors, materials, texture, logo, brand marks, graphics, pattern, stitching, hardware, packaging and every visible construction detail.
+Use different references only to understand the same product. Never combine them into a new design.
+Do not invent unseen details. If a detail is not visible in the references, keep it neutral and do not fabricate branding or features.
 
-STRICT RULES:
+STRICT:
 PRODUCT ONLY.
-NO model, NO person, NO human body, NO hands.
-NO on-screen text, captions, subtitles, stickers, price tags or added letters.
+NO model. NO person. NO human body. NO hands.
+NO on-screen text, captions, subtitles, stickers, price tags or newly generated letters.
+Do not alter or rewrite existing real branding that is physically printed on the referenced product.
 NO voice-over, dialogue, music or sound effects.
-NO extra product and NO duplicate product.
-No invented usage that requires a person or hand.
-Minimal clean realistic commercial environment.
-Natural lighting and smooth premium camera movement.`;
+NO extra products. NO duplicate products.
+NO invented human interaction or usage requiring hands.
+Natural realistic lighting. Minimal clean premium commercial environment.
+Smooth controlled camera movement. Product identity must remain consistent in every frame.`;
+ localStorage.setItem("v6url",$("url").value);localStorage.setItem("v6type",t);localStorage.setItem("v6prompt",$("prompt").value);
+ $("status").textContent="สร้าง Storyboard + Prompt แล้ว โดยไม่ใช้เครดิต AI";
 }
-$("prompt").value=makePrompt();
-$("make").onclick=()=>{$("prompt").value=makePrompt();localStorage.setItem("lastURL",$("url").value);localStorage.setItem("lastPrompt",$("prompt").value);$("status").textContent="สร้าง Storyboard + Prompt แล้ว โดยไม่ใช้เครดิต AI";};
-$("paste").onclick=async()=>{try{$("url").value=await navigator.clipboard.readText();$("status").textContent="วางลิงก์แล้ว";}catch{$("status").textContent="Safari ไม่อนุญาตให้อ่าน Clipboard — แตะช่องแล้วเลือก Paste ได้เลย";}};
-$("copy").onclick=async()=>{try{await navigator.clipboard.writeText($("prompt").value);$("status").textContent="คัดลอก Prompt แล้ว — เปิด Flow ได้เลย";}catch{$("prompt").select();document.execCommand("copy");$("status").textContent="คัดลอก Prompt แล้ว";}};
-const u=localStorage.getItem("lastURL"),p=localStorage.getItem("lastPrompt");if(u)$("url").value=u;if(p)$("prompt").value=p;
-if("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js").catch(()=>{});
-</script>
-</body></html>
+$("make").onclick=render;$("type").onchange=render;
+$("paste").onclick=async()=>{try{$("url").value=await navigator.clipboard.readText();$("status").textContent="วางลิงก์แล้ว";}catch{$("status").textContent="แตะช่องลิงก์ค้างไว้แล้วเลือก Paste ได้เลย";}};
+$("clear").onclick=()=>{$("url").value="";$("images").value="";$("previews").innerHTML="";$("imgCount").textContent="ยังไม่ได้เลือกรูป";localStorage.clear();render();};
+$("copy").onclick=async()=>{try{await navigator.clipboard.writeText($("prompt").value);$("status").textContent="คัดลอก Prompt แล้ว — เปิด Flow และใช้รูปต้นฉบับเป็น reference ได้เลย";}catch{$("prompt").select();document.execCommand("copy");}};
+$("images").onchange=e=>{
+ const files=[...e.target.files];$("previews").innerHTML="";
+ files.slice(0,12).forEach((f,i)=>{const d=document.createElement("div");d.className="thumb";const img=document.createElement("img");img.src=URL.createObjectURL(f);const s=document.createElement("span");s.textContent=`รูป ${i+1}`;d.append(img,s);$("previews").append(d)});
+ $("imgCount").textContent=files.length?`เลือกแล้ว ${files.length} รูป • ใช้รูปชุดนี้อัปโหลดใน Flow`:"ยังไม่ได้เลือกรูป";
+};
+$("url").value=localStorage.getItem("v6url")||"";$("type").value=localStorage.getItem("v6type")||"auto";render();
+if("serviceWorker" in navigator)navigator.serviceWorker.register("./sw.js").catch(()=>{});
+</script></body></html>
