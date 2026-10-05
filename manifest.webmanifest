@@ -1,9 +1,1 @@
-{
-  "name": "Product → Flow Maker V6",
-  "short_name": "Flow Maker",
-  "start_url": "./index.html",
-  "display": "standalone",
-  "background_color": "#f4f6fa",
-  "theme_color": "#111827",
-  "description": "Local-first Shopee/TikTok storyboard and Google Flow prompt maker for iPhone/iPad."
-}
+{"name":"Product → Flow Maker V7","short_name":"Flow Maker","start_url":"./index.html","display":"standalone","background_color":"#f4f6fa","theme_color":"#111827"}
