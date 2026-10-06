@@ -1,14 +1,28 @@
-<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0f1929"><title>Product → Flow Maker V7.3</title>
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0f1929"><title>Product → Flow Maker V7.2</title>
 <style>*{box-sizing:border-box}body{margin:0;background:#f2f5f8;color:#101827;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.w{max-width:760px;margin:auto;padding:22px 16px 60px}.hero,.card{background:#fff;border:1px solid #dce2e8;border-radius:28px;padding:26px;margin-bottom:18px}.hero{background:#0f1929;color:#fff}.hero h1{font-size:38px;line-height:1.08;margin:0 0 12px}.hero p{font-size:19px}.badges{display:flex;gap:8px;flex-wrap:wrap}.badge{border:1px solid #667085;border-radius:99px;padding:8px 13px}h2{font-size:29px;margin:0 0 22px}label{font-weight:700;display:block;margin:15px 0 7px;font-size:18px}input,select,textarea{width:100%;font:inherit;font-size:17px;border:1px solid #c9d0d8;border-radius:16px;padding:16px;background:#fff}textarea{min-height:105px}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}button,.filebtn{border:0;border-radius:16px;padding:16px;font:inherit;font-weight:750;font-size:18px;text-align:center}.primary{background:#0f1929;color:#fff;width:100%}.secondary{background:#e9edf2;color:#101827}.filebtn{display:block;background:#0f1929;color:#fff}#files{display:none}.preview{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.preview img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px}.note,.output{background:#eef3f7;border-radius:14px;padding:14px;margin-top:12px;line-height:1.5}.output{white-space:pre-wrap}.small{font-size:14px;color:#667085}</style></head><body><main class="w">
-<section class="hero"><h1>Product → Flow<br>Maker V7.3</h1><p>Simple Mode • 9:16 • 10s • Product Lock</p><div class="badges"><span class="badge">No Worker</span><span class="badge">Real Product</span><span class="badge">Usage Demo</span></div></section>
+<section class="hero"><h1>Product → Flow<br>Maker V7.2</h1><p>Simple Mode • 9:16 • 10s • Product Lock</p><div class="badges"><span class="badge">No Worker</span><span class="badge">Real Product</span><span class="badge">Usage Demo</span></div></section>
 <section class="card"><h2>1. ข้อมูลสินค้า</h2><label>ลิงก์สินค้า</label><input id="url" placeholder="Shopee / TikTok link"><div class="row"><button class="secondary" onclick="pasteLink()">วาง Clipboard</button><button class="secondary" onclick="clearAll()">ล้างข้อมูล</button></div><label>ชื่อสินค้า</label><input id="name" placeholder="เช่น adidas Duramo SL สีดำ"><label>ประเภทสินค้า</label><select id="type"><option>อัตโนมัติ / สินค้าทั่วไป</option><option>แฟชั่น / เสื้อผ้า</option><option>รองเท้า</option><option>กระเป๋า</option><option>เครื่องสำอาง</option><option>ของใช้ในบ้าน</option><option>อาหาร / เครื่องดื่ม</option><option>อุปกรณ์อิเล็กทรอนิกส์</option></select><label>จุดเด่น / วิธีใช้สินค้า</label><textarea id="detail" placeholder="สี วัสดุ ฟังก์ชัน วิธีใช้ หรือจุดที่ต้องโชว์"></textarea></section>
 <section class="card"><h2>2. เพิ่มรูปสินค้าจริง</h2><label class="filebtn" for="files">เลือกรูปสินค้าจาก iPhone</label><input id="files" type="file" accept="image/*" multiple><div id="preview" class="preview"></div><div class="note">เพิ่มรูปสินค้าจริงได้หลายมุม เพื่อใช้เป็น Reference และ Product Lock</div></section>
 <section class="card"><h2>3. ตั้งค่าคลิป</h2><label>รูปแบบ</label><select id="style"><option>Commercial + Usage Demo</option><option>Minimal Product Commercial</option><option>UGC Product-only</option><option>Premium Studio</option></select><label>ข้อความในคลิป</label><select id="txt"><option>ไม่มีข้อความ</option><option>อนุญาตข้อความสั้น</option></select><label>เสียง</label><select id="audio"><option>ไม่มีเสียงพากย์</option><option>Voice-over ภาษาไทย</option></select></section>
 <section class="card"><h2>4. Storyboard โฆษณา</h2><button class="primary" onclick="story()">สร้าง Commercial Storyboard</button><div id="story" class="output" hidden></div></section>
-<section class="card"><h2>5. Prompt สำหรับ Flow</h2><button class="primary" onclick="promptIt()">สร้าง Prompt</button><div id="prompt" class="output" hidden></div><button id="copy" class="secondary" style="display:none;width:100%;margin-top:10px" onclick="copyIt()">คัดลอก Prompt</button><button class="primary" style="margin-top:10px" onclick="openFlow()">เปิด Google Flow</button><p class="small">V7.3 • สร้าง Prompt แล้วเปิด Google Flow ได้จากหน้านี้ • ไม่ใช้ Worker หรือ Auto Import</p></section></main>
+<section class="card"><h2>5. Prompt สำหรับ Flow</h2><button class="primary" onclick="promptIt()">สร้าง Prompt</button><div id="prompt" class="output" hidden></div><button id="copy" class="secondary" style="display:none;width:100%;margin-top:10px" onclick="copyIt()">คัดลอก Prompt</button><p class="small">V7.2 ไม่ใช้ Worker หรือ Auto Import</p></section></main>
 <script>
 const $=x=>document.getElementById(x);
-$('files').onchange=e=>{let p=$('preview');p.innerHTML='';[...e.target.files].forEach(f=>{let i=document.createElement('img');i.src=URL.createObjectURL(f);p.appendChild(i)})};
+$('files').addEventListener('change',function(e){
+  const p=$('preview'); p.innerHTML='';
+  const files=Array.from(e.target.files||[]);
+  if(!files.length){p.innerHTML='<div>ยังไม่ได้เลือกรูป</div>';return;}
+  files.forEach((file,i)=>{
+    const box=document.createElement('div');
+    const img=document.createElement('img');
+    img.style.cssText='width:100%;max-height:260px;object-fit:contain;border-radius:14px;margin:8px 0;background:#f5f5f5';
+    const reader=new FileReader();
+    reader.onload=function(ev){img.src=ev.target.result;};
+    reader.onerror=function(){box.textContent='เปิดรูปที่ '+(i+1)+' ไม่สำเร็จ';};
+    reader.readAsDataURL(file);
+    box.appendChild(img); p.appendChild(box);
+  });
+});
 async function pasteLink(){try{$('url').value=await navigator.clipboard.readText()}catch(e){alert('แตะช่องลิงก์ค้างไว้ แล้วเลือก วาง')}}
 function clearAll(){['url','name','detail'].forEach(x=>$(x).value='');$('preview').innerHTML='';$('files').value=''}
 function nm(){return $('name').value.trim()||'สินค้าจริงจากรูปอ้างอิง'}
@@ -37,4 +51,4 @@ ${d?'Important product/use details: '+d+'.':''}
 PRODUCT LOCK:
 Use the exact product from the uploaded reference images. Preserve its real shape, proportions, colors, material, texture, logo, label, graphics, packaging and all visible details. Do not redesign, recolor, simplify, replace or invent product details. Maintain visual consistency in every shot.${noText?' No subtitles, captions, stickers, on-screen text or generated letters.':''}${noAudio?' No voice-over, dialogue or spoken audio.':''}`;$('prompt').hidden=false;$('copy').style.display='block'}
 async function copyIt(){try{await navigator.clipboard.writeText($('prompt').textContent);$('copy').textContent='คัดลอกแล้ว ✓'}catch(e){}}
-function openFlow(){window.open('https://labs.google/fx/tools/flow','_blank')}\n</script></body></html>
+</script></body></html>
